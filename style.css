@@ -1,0 +1,41 @@
+.gauge-average {
+
+}
+
+.gauge-average label {
+	display: block;
+	text-align: center;
+	margin-top: 5px;
+}
+
+.centered {
+  position: fixed;
+  margin-top: 10px;
+  left: 40%;
+}
+
+/* line chart styles */
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.fixed-bottom {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   width:100%;
+}

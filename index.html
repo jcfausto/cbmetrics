@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CBTime Metrics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="app.min.css">
+     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+    <script type="text/javascript" src="gauge.js"></script>
+    <script type="text/javascript" src="cbtime.js"></script>
+    <style>
+      /* TODO */
+    </style>
+  </head>
+
+  <body>
+    <div class="app-page" data-page="home">
+      <div class="app-topbar">
+        <div class="app-title">Metrics</div>
+      </div>
+      <div class="app-content">
+        <div class="app-section">
+          <div class="app-button" data-target="FB">Final Builder</div>
+        </div>
+        <div class="app-section">
+          <div class="app-button" data-target="IDE">IDE Compiling & Code Insight</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-page" data-page="FB">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Final Builder</div>
+      </div>
+      <div class="app-content">
+        <div class="gauge-average">
+          <label>Average time</label>
+          <span id="memoryGaugeContainer" class="centered"></span>
+        </div>
+        <span id="lineChart" class="fixed-bottom"></span>
+      </div>
+    </div>
+
+
+    <div class="app-page" data-page="IDE">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">IDE Compiling & Code Insight</div>
+      </div>
+      <div class="app-content">
+        Metrics here for IDE Compiling & Code Insight
+      </div>
+    </div>
+
+    <script src="zepto.js"></script>
+    <script src="app.min.js"></script>
+    <script src="controllers.js"></script>
+    <script>
+      try {
+        App.restore();
+      } catch (err) {
+        App.load('home');
+      }
+    </script>
+  </body>
+</html>
